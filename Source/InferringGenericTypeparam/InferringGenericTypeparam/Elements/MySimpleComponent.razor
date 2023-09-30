@@ -1,0 +1,10 @@
+﻿@using InferringGenericTypeparam.Model;
+
+Value: @Instance.Value
+
+@typeparam TValue
+
+@code {
+    [Parameter, EditorRequired]
+    public GenericClass<TValue> Instance { get; set; } = null!;
+}
