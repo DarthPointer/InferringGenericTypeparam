@@ -14,9 +14,13 @@ Welcome to your new app.
 
 <MyComponent Instance="intInstance" TClass="GenericClass<int>" TValue="int"/>
 
+<MyContainingComponent InstanceContainer="container"/>
+
 <MySimpleComponent Instance="intInstance"/>
 
 @code
 {
     private readonly GenericClass<int> intInstance = new() { Value = 4 };
+
+    private readonly Container<GenericClass<int>, int> container = new() { Instance = new() { Value = 10 } };
 }

@@ -1,0 +1,11 @@
+﻿@using InferringGenericTypeparam.Model;
+
+Value: @InstanceContainer.Instance.Value
+
+@typeparam TValue
+@typeparam TClass where TClass : GenericClass<TValue>
+
+@code {
+    [Parameter, EditorRequired]
+    public Container<TClass, TValue> InstanceContainer { get; set; } = null!;
+}
